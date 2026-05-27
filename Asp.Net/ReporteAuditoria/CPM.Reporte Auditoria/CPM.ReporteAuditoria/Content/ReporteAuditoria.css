@@ -1,0 +1,34 @@
+﻿.dropdown-menu.custom-font,
+.dropdown-menu.custom-font .dropdown-item,
+.dropdown-menu.custom-font .dropdown-item label,
+.dropdown-menu.custom-font .dropdown-item label *,
+.dropdown-menu.custom-font .dropdown-item span {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
+    font-size: 13px !important;
+    font-weight: normal !important;
+    line-height: 1.3 !important;
+}
+
+.custom-dropdown-item {
+    padding: 6px 12px !important;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+    .custom-dropdown-item label {
+        display: flex !important;
+        align-items: center !important;
+        width: 100% !important;
+        margin: 0 !important;
+    }
+
+    .custom-dropdown-item input[type="checkbox"] {
+        margin-right: 8px !important;
+        flex-shrink: 0 !important;
+    }
+
+    .custom-dropdown-item span {
+        white-space: normal !important;
+        word-break: break-word !important;
+        flex: 1 !important;
+    }

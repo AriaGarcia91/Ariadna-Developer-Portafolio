@@ -1,0 +1,47 @@
+﻿body {
+}
+
+.col-md-3{
+    display:inline-block;
+}
+
+.form-select form-select-sm{
+    display:inline-block;
+}
+.select2-selection__rendered {
+    display: none !important;
+}
+.select2-results__option[aria-selected="true"] {
+    background-color: #f0f0f0;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.select2-selection__choice {
+    display: none !important;
+}
+
+
+.select2-selection__rendered {
+    padding-left: 8px !important;
+}
+.select2-results__option[aria-selected="true"] {
+    background-color: #e2f0ff; /* color suave de fondo */
+    font-weight: 600;
+    text-decoration: underline;
+}
+
+/* Opcional: cambiar cursor al pasar sobre opciones */
+.select2-results__option:hover {
+    background-color: #c2ddff;
+    cursor: pointer;
+}
+/* Asegúrate que los chips se oculten */
+.select2-container--default .select2-selection__choice {
+    display: none !important;
+    width: 0 !important;
+    height: 0 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    border: none !important;
+}
