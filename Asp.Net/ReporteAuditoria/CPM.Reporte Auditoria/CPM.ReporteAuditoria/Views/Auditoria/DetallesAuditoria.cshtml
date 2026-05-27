@@ -1,0 +1,103 @@
+﻿@model CPM.ReporteAuditoria.BusinessType.BitacoraDetalleAudit
+
+@{
+    ViewBag.Title = "DetallesAuditoria";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>DetallesAuditoria</h2>
+
+<div id="seccionTabla">
+    <table class="table table-success table-striped" id="tablaDetalle">
+        <thead>
+            <tr>
+                <th scope="col">Fecha</th>
+                <th scope="col">CambiadoPor</th>
+                <th scope="col">Evento</th>
+                <th scope="col">Campo Cambiado</th>
+                <th scope="col">Valor Anterior</th>
+                <th scope="col">Nuevo Valor</th>
+            </tr>
+        </thead>
+        <tbody>
+            @if (Model.Detalles != null && Model.Detalles.Count > 0)
+            {
+                foreach (var item in Model.Detalles.OrderByDescending(d => d.Fecha))
+                {
+                    <tr>
+                        <td>@Html.DisplayFor(model => item.Fecha)</td>
+                        <td>@Html.DisplayFor(model => item.CambiadoPor)</td>
+                        <td>@Html.DisplayFor(model => item.Accion)</td>
+                        <td>@Html.DisplayFor(model => item.CampoCambiado)</td>
+                        <td>@Html.DisplayFor(model => item.ValorAnterior)</td>
+                        <td>@Html.DisplayFor(model => item.NuevoValor)</td>
+                    </tr>
+                }
+            }
+            else
+            {
+                <tr>
+                    <td colspan="6" style="font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size:12px;">
+                        <center>NO SE ENCONTRARON DETALLES DE LA AUDITORIA.</center>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+<!-- Sección de paginación -->
+<nav aria-label="Page navigation">
+    <ul class="pagination">
+        @if (Model.Paginado != null)
+        {
+            for (int i = 1; i <= Model.Paginado.TotalPage; i++)
+            {
+                <li class="page-item @(Model.Paginado.CurrentPage == i ? "active" : "")">
+                    <a class="page-link" href="#" onclick="cambiarPagina('@Model.EntityName', '@Model.IdRegistro', @i, @Model.Paginado.ItemByPage)">@i</a>
+                </li>
+            }
+        }
+    </ul>
+</nav>
+
+<div id="paginaActual" class="mt-3">
+    Página actual: <span id="numeroPaginaActual">@Model.Paginado.CurrentPage</span>
+</div>
+
+
+
+<script>
+    function cambiarPagina(entidad, idregistro, pagina, numeroElementos) {
+        document.getElementById('numeroPaginaActual').innerText = pagina;
+        RecuperarDetalles(entidad, idregistro, pagina, numeroElementos); // Llama a la función para recuperar los datos de la nueva página
+    }
+
+    function RecuperarDetalles(entidad, idregistro, pagina, numeroElementos) {
+        try {
+            $.ajax({
+                type: 'GET',
+                url: '@Url.Action("DetallesAuditoria", "Auditoria")',
+                contentType: 'application/json;charset=utf-8',
+                cache: false,
+                async: false,
+                data: {
+                    entityName: entidad,
+                    registroId: idregistro,
+                    paginaActual: pagina,
+                    numeroElementos: numeroElementos // Número de elementos por página
+                },
+                success: function (data) {
+                    $('#seccionTabla').html($(data).find('#seccionTabla').html());
+                    $('.pagination').html($(data).find('.pagination').html());
+                    $('#numeroPaginaActual').text(pagina);
+                }
+            });
+        } catch (e) {
+            console.error(e);
+        }
+    }
+</script>
+
+
+

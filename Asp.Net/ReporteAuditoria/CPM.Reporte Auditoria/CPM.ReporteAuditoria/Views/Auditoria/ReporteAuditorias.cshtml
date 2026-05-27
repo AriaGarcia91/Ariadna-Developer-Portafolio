@@ -1,0 +1,140 @@
+﻿@model CPM.ReporteAuditoria.Models.ViewReporteAuditoriaModel
+
+@{
+    ViewBag.Title = "ReporteAuditorias";
+}
+<link href="~/Content/select2.min.css" rel="stylesheet" />
+<div class="container-fluid">
+    <!-- Filtros -->
+    <div class="row justify-content-center">
+        <div class="col-xl-10 col-lg-11 col-md-12">
+            <div class="row g-3 align-items-end" style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 13px;">
+                <!--Filtro TipoOficina-->
+                <div class="col-md-2 d-flex flex-column justify-content-start pt-4">
+                    <label for="tipoOficinaSelect" class="form-label fw-bold">Tipo Oficina</label>
+                    <select class="form-control form-control-sm" id="tipoOficinaSelect" onchange="RecuperarOficinas(this.value)" required>
+                        <option selected value=""></option>
+                        @foreach (var item in Model.TipoOficinas)
+                        {
+                            <option value="@item.Key">@item.Value</option>
+                        }
+                    </select>
+                </div>
+                <!--Oficinas-->
+                <div class="col-md-3">
+                    <label for="oficinasSelect" class="form-label fw-bold">Oficinas</label>
+                    <select class="form-control form-control-sm" id="oficinasSelect" required>
+                    </select>
+                    <div class="invalid-feedback" id="lblOficinas" style="display: none;">Selecciona una plaza o sucursal.</div>
+                </div>
+                <!-- Usuarios con Select2 -->
+                <div class="col-md-3">
+                    <label for="usuariosSelect" class="form-label font-weight-bold">Usuarios</label>
+                    <select class="form-control form-control-sm" id="usuariosSelect" multiple="multiple">
+                    </select>
+                <div class="invalid-feedback" id="lblUsuario" style="display: none;">Selecciona al menos un Usuario válido.</div>
+                </div>
+                <!-- Tipo Operación -->
+                <!-- Fecha Inicio -->
+                <div class="col-md-2">
+                    <div>
+                        <label for="auditDate" class="form-label fw-bold">Desde</label>
+                        <input type="date" class="form-control form-control-sm mb-2" id="fechaInicio" required onchange="LimpiarFechaFin()" />
+                        <div class="invalid-feedback" id="lblFechaInicio" style="display: none;">Seleccione una fecha de inicio.</div>
+                    </div>
+                    <div>
+                        <label for="auditDate" class="form-label fw-bold">Hasta</label>
+                        <input type="date" class="form-control form-control-sm mb-2" id="fechaFin" onchange="ValidarRangoFecha()" required />
+                        <div class="invalid-feedback" id="lblFechaFin" style="display: none;">Seleccione una fecha de fin</div>
+                        <div class="invalid-feedback" id="lblFechaFinAlerta" style="display: none;">La fecha no debe ser menor a la fecha de inicio</div>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div>
+                        <label for="tipoOperacion" class="form-label fw-bold">Tipo Operación</label>
+                        <select class="form-control form-control-sm" id="tipoOperacion" onchange="BloquearEvento()" required>
+                            <option></option>
+                            @foreach (var item in Model.Operaciones)
+                            {
+                                <option value="@item.Key">@item.Value</option>
+                            }
+                        </select>
+                        <div class="invalid-feedback" id="lblTipoOperacion" style="display : none">Seleccione un tipo de operación</div>
+                    </div>
+                    <div>
+                        <label for="tipoEvento" class="form-label fw-bold">Evento</label>
+                        <select class="form-control form-control-sm" id="tipoEvento" required>
+                            <option selected value=""></option>
+                            @foreach (var item in Model.Eventos)
+                            {
+                                <option value="@item.Key">@item.Value</option>
+                            }
+                        </select>
+                        <div class="invalid-feedback" id="lblTipoEvento" style="display:none">Seleccione un tipo de evento</div>
+                    </div>          
+                    <div>
+                        <button type="button"
+                                class="btn btn-primary btn-sm mb-2"
+                                onclick="ExportarTablaAExcel()">
+                            <i class="fas fa-file-excel me-2"></i>Exportar a Excel
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-- Alerta dinámica -->
+            <div id="alertaBasica" class="alert alert-warning alert-dismissible fade" role="alert" style="display: none;">
+                <span id="mensajeBasico"></span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal para spinner -->
+<div class="modal fade" id="modalSpinnerExcel" tabindex="-1" aria-hidden="true" data-backdrop="static" data-keyboard="false">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content bg-transparent border-0 shadow-none">
+            <div class="modal-body text-center">
+                <div class="spinner-border text-primary" role="status"></div>
+                <p class="mt-3 fw-bold text-white">Generando archivo Excel, por favor espera...</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section scripts {
+    <script src="~/Scripts/select2.min.js"></script>
+    <script src="~/Scripts/ReporteAuditoria.js"></script>
+    <script>
+        var urlRecuperarOficinas = '@Url.Action("RecuperarOficinas","Auditoria")';
+        var urlRecuperarUsuarios = '@Url.Action("RecuperarUsuarios","Auditoria")';
+        var urlRecuperarUsuariosOdg = '@Url.Action("RecuperarUsuariosPorODG", "Auditoria")';
+        const exportarExcelUrl = '@Url.Action("ExportarExcel", "Auditoria")';
+        $(document).ready(function () {
+            $('#usuariosSelect').select2({
+                placeholder: 'Escribe para buscar usuarios...',
+                allowClear: true,
+                width: '100%'
+            });
+
+            $('#oficinasSelect').select2({
+                placeholder: 'Selecciona una oficina',
+                allowClear: true,
+                width: '100%'
+            });
+
+            $('#oficinasSelect').on('change', function () {
+                const oficinaId = $(this).val();
+
+                if (oficinaId) {
+                    RecuperarUsuariosPorOficina(oficinaId);
+                } else {
+                    LimpiarUsuarios();
+                }
+            });
+
+            $('#tipoOficinaSelect').on('change', function () {
+                LimpiarUsuarios();
+            });
+        });
+    </script>
+}
