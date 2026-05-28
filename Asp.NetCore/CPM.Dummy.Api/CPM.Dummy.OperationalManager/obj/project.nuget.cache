@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "t22wUM/DdNU=",
+  "success": true,
+  "projectFilePath": "C:\\Repos TFS\\CPM.Dummy.Api\\CPM.Dummy\\CPM.Dummy.OperationalManager\\CPM.Dummy.OperationalManager.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\ariadna.garcia\\.nuget\\packages\\system.diagnostics.eventlog\\8.0.0\\system.diagnostics.eventlog.8.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

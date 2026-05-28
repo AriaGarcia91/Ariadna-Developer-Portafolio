@@ -1,0 +1,305 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Repos TFS\\CPM.Dummy.Api\\CPM.Dummy\\CPM.Dummy.DataLayer\\CPM.Dummy.DataLayer.csproj": {}
+  },
+  "projects": {
+    "C:\\Repos TFS\\CPM.Dummy.Api\\CPM.Dummy\\CPM.Dummy.BussinesType\\CPM.Dummy.BussinesType.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Repos TFS\\CPM.Dummy.Api\\CPM.Dummy\\CPM.Dummy.BussinesType\\CPM.Dummy.BussinesType.csproj",
+        "projectName": "CPM.Dummy.BussinesType",
+        "projectPath": "C:\\Repos TFS\\CPM.Dummy.Api\\CPM.Dummy\\CPM.Dummy.BussinesType\\CPM.Dummy.BussinesType.csproj",
+        "packagesPath": "C:\\Users\\ariadna.garcia\\.nuget\\packages\\",
+        "outputPath": "C:\\Repos TFS\\CPM.Dummy.Api\\CPM.Dummy\\CPM.Dummy.BussinesType\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\ariadna.garcia\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.200"
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.200/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Repos TFS\\CPM.Dummy.Api\\CPM.Dummy\\CPM.Dummy.DataInterface\\CPM.Dummy.DataInterface.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Repos TFS\\CPM.Dummy.Api\\CPM.Dummy\\CPM.Dummy.DataInterface\\CPM.Dummy.DataInterface.csproj",
+        "projectName": "CPM.Dummy.DataInterface",
+        "projectPath": "C:\\Repos TFS\\CPM.Dummy.Api\\CPM.Dummy\\CPM.Dummy.DataInterface\\CPM.Dummy.DataInterface.csproj",
+        "packagesPath": "C:\\Users\\ariadna.garcia\\.nuget\\packages\\",
+        "outputPath": "C:\\Repos TFS\\CPM.Dummy.Api\\CPM.Dummy\\CPM.Dummy.DataInterface\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\ariadna.garcia\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "C:\\Repos TFS\\CPM.Dummy.Api\\CPM.Dummy\\CPM.Dummy.BussinesType\\CPM.Dummy.BussinesType.csproj": {
+                "projectPath": "C:\\Repos TFS\\CPM.Dummy.Api\\CPM.Dummy\\CPM.Dummy.BussinesType\\CPM.Dummy.BussinesType.csproj"
+              },
+              "C:\\Repos TFS\\CPM.Dummy.Api\\CPM.Dummy\\CPM.Dummy.OperationalManager\\CPM.Dummy.OperationalManager.csproj": {
+                "projectPath": "C:\\Repos TFS\\CPM.Dummy.Api\\CPM.Dummy\\CPM.Dummy.OperationalManager\\CPM.Dummy.OperationalManager.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.200"
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.200/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Repos TFS\\CPM.Dummy.Api\\CPM.Dummy\\CPM.Dummy.DataLayer\\CPM.Dummy.DataLayer.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Repos TFS\\CPM.Dummy.Api\\CPM.Dummy\\CPM.Dummy.DataLayer\\CPM.Dummy.DataLayer.csproj",
+        "projectName": "CPM.Dummy.DataLayer",
+        "projectPath": "C:\\Repos TFS\\CPM.Dummy.Api\\CPM.Dummy\\CPM.Dummy.DataLayer\\CPM.Dummy.DataLayer.csproj",
+        "packagesPath": "C:\\Users\\ariadna.garcia\\.nuget\\packages\\",
+        "outputPath": "C:\\Repos TFS\\CPM.Dummy.Api\\CPM.Dummy\\CPM.Dummy.DataLayer\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\ariadna.garcia\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "C:\\Repos TFS\\CPM.Dummy.Api\\CPM.Dummy\\CPM.Dummy.BussinesType\\CPM.Dummy.BussinesType.csproj": {
+                "projectPath": "C:\\Repos TFS\\CPM.Dummy.Api\\CPM.Dummy\\CPM.Dummy.BussinesType\\CPM.Dummy.BussinesType.csproj"
+              },
+              "C:\\Repos TFS\\CPM.Dummy.Api\\CPM.Dummy\\CPM.Dummy.DataInterface\\CPM.Dummy.DataInterface.csproj": {
+                "projectPath": "C:\\Repos TFS\\CPM.Dummy.Api\\CPM.Dummy\\CPM.Dummy.DataInterface\\CPM.Dummy.DataInterface.csproj"
+              },
+              "C:\\Repos TFS\\CPM.Dummy.Api\\CPM.Dummy\\CPM.Dummy.OperationalManager\\CPM.Dummy.OperationalManager.csproj": {
+                "projectPath": "C:\\Repos TFS\\CPM.Dummy.Api\\CPM.Dummy\\CPM.Dummy.OperationalManager\\CPM.Dummy.OperationalManager.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.200"
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.CrmSdk.XrmTooling.CoreAssembly": {
+              "target": "Package",
+              "version": "[9.1.1.65, )"
+            },
+            "Microsoft.PowerPlatform.Dataverse.Client": {
+              "target": "Package",
+              "version": "[1.1.32, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.200/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Repos TFS\\CPM.Dummy.Api\\CPM.Dummy\\CPM.Dummy.OperationalManager\\CPM.Dummy.OperationalManager.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Repos TFS\\CPM.Dummy.Api\\CPM.Dummy\\CPM.Dummy.OperationalManager\\CPM.Dummy.OperationalManager.csproj",
+        "projectName": "CPM.Dummy.OperationalManager",
+        "projectPath": "C:\\Repos TFS\\CPM.Dummy.Api\\CPM.Dummy\\CPM.Dummy.OperationalManager\\CPM.Dummy.OperationalManager.csproj",
+        "packagesPath": "C:\\Users\\ariadna.garcia\\.nuget\\packages\\",
+        "outputPath": "C:\\Repos TFS\\CPM.Dummy.Api\\CPM.Dummy\\CPM.Dummy.OperationalManager\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\ariadna.garcia\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.200"
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "System.Diagnostics.EventLog": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.200/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

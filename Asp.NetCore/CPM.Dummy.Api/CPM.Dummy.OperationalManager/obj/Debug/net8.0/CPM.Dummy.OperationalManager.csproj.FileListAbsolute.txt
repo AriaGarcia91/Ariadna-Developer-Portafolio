@@ -1,0 +1,13 @@
+C:\Repos TFS\CPM.Dummy.Api\CPM.Dummy\CPM.Dummy.OperationalManager\bin\Debug\net8.0\CPM.Dummy.OperationalManager.deps.json
+C:\Repos TFS\CPM.Dummy.Api\CPM.Dummy\CPM.Dummy.OperationalManager\bin\Debug\net8.0\CPM.Dummy.OperationalManager.dll
+C:\Repos TFS\CPM.Dummy.Api\CPM.Dummy\CPM.Dummy.OperationalManager\bin\Debug\net8.0\CPM.Dummy.OperationalManager.pdb
+C:\Repos TFS\CPM.Dummy.Api\CPM.Dummy\CPM.Dummy.OperationalManager\obj\Debug\net8.0\CPM.Dummy.OperationalManager.csproj.AssemblyReference.cache
+C:\Repos TFS\CPM.Dummy.Api\CPM.Dummy\CPM.Dummy.OperationalManager\obj\Debug\net8.0\CPM.Dummy.OperationalManager.GeneratedMSBuildEditorConfig.editorconfig
+C:\Repos TFS\CPM.Dummy.Api\CPM.Dummy\CPM.Dummy.OperationalManager\obj\Debug\net8.0\CPM.Dummy.OperationalManager.AssemblyInfoInputs.cache
+C:\Repos TFS\CPM.Dummy.Api\CPM.Dummy\CPM.Dummy.OperationalManager\obj\Debug\net8.0\CPM.Dummy.OperationalManager.AssemblyInfo.cs
+C:\Repos TFS\CPM.Dummy.Api\CPM.Dummy\CPM.Dummy.OperationalManager\obj\Debug\net8.0\CPM.Dummy.OperationalManager.csproj.CoreCompileInputs.cache
+C:\Repos TFS\CPM.Dummy.Api\CPM.Dummy\CPM.Dummy.OperationalManager\obj\Debug\net8.0\CPM.Dummy.OperationalManager.sourcelink.json
+C:\Repos TFS\CPM.Dummy.Api\CPM.Dummy\CPM.Dummy.OperationalManager\obj\Debug\net8.0\CPM.Dummy.OperationalManager.dll
+C:\Repos TFS\CPM.Dummy.Api\CPM.Dummy\CPM.Dummy.OperationalManager\obj\Debug\net8.0\refint\CPM.Dummy.OperationalManager.dll
+C:\Repos TFS\CPM.Dummy.Api\CPM.Dummy\CPM.Dummy.OperationalManager\obj\Debug\net8.0\CPM.Dummy.OperationalManager.pdb
+C:\Repos TFS\CPM.Dummy.Api\CPM.Dummy\CPM.Dummy.OperationalManager\obj\Debug\net8.0\ref\CPM.Dummy.OperationalManager.dll

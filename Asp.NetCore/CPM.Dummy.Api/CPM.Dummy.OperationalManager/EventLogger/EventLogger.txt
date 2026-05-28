@@ -1,0 +1,1 @@
+﻿new-eventlog -logname CPM.WebApi -source WebApi.CPM
